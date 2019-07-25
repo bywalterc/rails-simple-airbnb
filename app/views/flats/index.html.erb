@@ -2,18 +2,18 @@
   <h1>List of flats</h1>
 </div>
 
-<img src="" alt="">
-
 <% @flats.each do |flat|  %>
   <div class="flat-card-index">
     <div class="flat-image-index">
-      <img src="" alt="">
+      <img src=<%= flat.picture %> alt="">
     </div>
     <div class="flat-summary-index">
-      <h3><%= link_to flat.name, flat_path(flat) %></h3>
+      <h3><%= link_to flat.name, flat_path(flat), {class: "flat-summary-link"} %></h3>
       <p><%= flat.address %></p>
-      <p>£<%= flat.price_per_night %> per night</p>
-      <p><%= flat.number_of_guests %> guests</p>
+      <div class="flat-summary-price-guest">
+        <p><i class="fas fa-user-friends"></i>  <%= flat.number_of_guests %></p>
+        <p><i class="fas fa-pound-sign"></i>  <%= flat.price_per_night %> per night</p>
+      </div>
     </div>
   </div>
 
