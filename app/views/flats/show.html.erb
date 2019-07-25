@@ -1,0 +1,24 @@
+<div class="banner-img">
+  <img src=<%= @flat.picture %> alt="">
+</div>
+
+<div class="container detail-area">
+  <div class="detail-box page-title">
+    <h2><%= @flat.name %></h1>
+    <p><%= @flat.address %></p>
+  </div>
+
+  <div class="detail-box description">
+    <h3>A little bit more about this flat:</h3>
+    <p><%= @flat.description %></p>
+  </div>
+
+  <div class="detail-box details">
+    <h3>Details:</h3>
+    <div class="flat-summary-price-guest">
+      <p><i class="fas fa-user-friends"></i>  <%= @flat.number_of_guests %></p>
+      <p><i class="fas fa-pound-sign"></i>  <%= @flat.price_per_night %> per night</p>
+    </div>
+  </div>
+</div>
+

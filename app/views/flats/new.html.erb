@@ -1,37 +1,39 @@
-<div class="page-title">
-  <h1>New Flat</h1>
+<div class="container">
+  <div class="page-title">
+    <h1>New Flat</h1>
+  </div>
+
+  <%= form_for(@flat) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :price_per_night %>
+      <%= f.text_field :price_per_night, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :number_of_guests %>
+      <%= f.text_field :number_of_guests, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.text_field :picture, class: 'form-control' %>
+    </div>
+
+    <%= f.submit class: 'btn btn-dark' %>
+  <% end %>
 </div>
-
-<%= form_for(@flat) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
-  </div>
-
-   <div class="form-group">
-    <%= f.label :price_per_night %>
-    <%= f.text_field :price_per_night, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :number_of_guests %>
-    <%= f.text_field :number_of_guests, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :picture %>
-    <%= f.text_field :picture, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-dark' %>
-<% end %>
